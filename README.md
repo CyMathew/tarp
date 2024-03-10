@@ -197,8 +197,57 @@ Navigator(
 )
 ```
 
-An example using [GoRouter](https://pub.dev/packages/go_router) is available [here](https://github.com/cymathew/tarp/blob/main/sheet/example/lib/examples/route/navigation/go_router.dart)
+### Go_Router Example
+An example using [GoRouter](https://pub.dev/packages/go_router) is available [here](https://github.com/cymathew/tarp/blob/main/example/lib/examples/route/navigation/go_router.dart)
 
+```dart
+ late final GoRouter _router = GoRouter(
+    routes: <GoRoute>[
+      GoRoute(
+          path: '/',
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return MaterialExtendedPage<void>(
+              key: state.pageKey,
+              child: BooksListScreen(
+                books: books,
+                onBrigthnessChanged: (Brightness brightness) {
+                  setState(() {
+                    this.brightness = brightness;
+                  });
+                },
+              ),
+            );
+          },
+          routes: <GoRoute>[
+            GoRoute(
+              name: 'book',
+              path: 'book/:bid',
+              pageBuilder: (BuildContext context, GoRouterState state) {
+                final String id = state.pathParameters['bid']!;
+                final Book? book =
+                    books.firstWhereOrNull((Book b) => b.id == id);
+                return CupertinoSheetPage<void>(
+                  key: state.pageKey,
+                  child: BookDetailsScreen(
+                    book: book!,
+                  ),
+                );
+              },
+              redirect: (context, state) {
+                final String id = state.pathParameters['bid']!;
+                final Book? book =
+                    books.firstWhereOrNull((Book b) => b.id == id);
+                if (book == null) {
+                  return '/404';
+                }
+                // no need to redirect at all
+                return null;
+              },
+            ),
+          ]),
+    ],
+  );
+  ```
 
 
 ### Set the initial position

@@ -19,13 +19,13 @@ class MaterialSheetRoute<T> extends SheetRoute<T> {
     Duration? duration,
   }) : super(
           builder: (BuildContext context) => Material(
-            child: Builder(
-              builder: builder,
-            ),
             color: backgroundColor,
             clipBehavior: clipBehavior ?? Clip.none,
             shape: shape,
             elevation: elevation ?? 1,
+            child: Builder(
+              builder: builder,
+            ),
           ),
           detents: detents,
           initialExtent: initialDetent,
