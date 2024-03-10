@@ -1,0 +1,21 @@
+name: tarp
+description: "A canvas modal package that covers up part of the main screen"
+version: 0.1.0
+homepage:
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  mocktail: ^1.0.3
+
+
+flutter:
