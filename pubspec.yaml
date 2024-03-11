@@ -1,6 +1,6 @@
 name: tarp
 description: "A canvas modal package that covers up part of the main screen"
-version: 0.1.1
+version: 0.1.2
 homepage:
 
 environment:
