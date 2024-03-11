@@ -17,6 +17,7 @@ class MaterialSheetRoute<T> extends SheetRoute<T> {
     List<double>? detents,
     double initialDetent = 1,
     Duration? duration,
+    super.settings,
   }) : super(
           builder: (BuildContext context) => Material(
             color: backgroundColor,

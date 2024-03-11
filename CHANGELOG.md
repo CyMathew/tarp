@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Added settings option for MaterialSheetRoute 
+
 ## 0.1.1
 
 * Added MaterialSheetRoute helper route wrapper over SheetRoute for easy Material Design Route calls
