@@ -10,7 +10,7 @@ import 'package:example/examples/route/modals/avatar_sheet.dart';
 import 'package:example/examples/route/modals/bar_sheet.dart';
 import 'package:example/examples/route/modals/dialog_sheet.dart';
 import 'package:example/examples/route/modals/floating_sheet.dart';
-import 'package:example/examples/route/navigation/cupertino_page.dart';
+import 'package:example/examples/route/navigation/cupertino_books.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tarp/route.dart';
